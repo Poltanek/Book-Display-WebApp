@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('C:\Programming\React\Book Store Practice\client\app\src\assets\fonts\Playfair_Display\PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Navbar.module.css */
+ 
+.header {
+    background: transparent; /* Background color for the entire header */
+    width: 100%;
+    position: fixed; /* Fixes the header at the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensures header stays on top of other content */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 50px;
+    background: transparent;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Distributes space between logo and navbar */
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: auto; /* Pushes the logo to the far left */
+    font-family:'PlayfairDisplay', serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center-aligns the nav items */
+    flex-grow: 1; /* Allows navbar to take up available space */
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-left: center;
+}
+
+.navItem {
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #ddd;
+}
+
+.navItem::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.navItem:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none; /* Initially hidden */
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.bar, .hamburger::after, .hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #FFF;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Active state for hamburger animation */
+.isActive::before {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.isActive::after {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.isActive .bar {
+    opacity: 0;
+}
+
+/* Responsive styling: hide navbar, show hamburger menu */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hides the navbar on smaller screens */
+    }
+    .hamburger {
+        display: block; /* Shows the hamburger menu on smaller screens */
+    }
+}
