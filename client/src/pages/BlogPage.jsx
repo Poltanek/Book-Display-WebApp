@@ -6,9 +6,6 @@ const BlogPage = () => {
         <div>
             <Navbar />
             {/*Static Components*/}
-            <div>
-                <button>Hello!</button>
-            </div>
         </div>
       )
     }

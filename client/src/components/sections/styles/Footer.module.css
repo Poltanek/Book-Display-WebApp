@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.footer {
+    background: linear-gradient(to right, #000000, #000000);
+    width: 100%;
+    padding: 50px 7%;
+}
+
+.footer * {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footerCol {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.footerCol h2 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footerPara {
+    max-width: 250px;
+}
+
+.textOffice {
+    margin-bottom: 20px;
+}
+
+.email {
+    margin: 30px 0;
+}
+
+.phone {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.underline {
+    width: 70px;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 7px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 3px;
+    animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.footerCol ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footerCol ul li {
+    margin: 10px;
+}
+
+.footerCol form {
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.footerCol form input {
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: white;
+}
+
+.footerCol form i {
+    font-size: 15px;
+}
+
+.socialIcons {
+    margin-top: 20px;
+}
+
+.socialIcons i {
+    padding: 10px;
+    background-color: white;
+    color: #00093c;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000000; /* Ensure it matches the footer color scheme */
+    color: white;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Subtle border for separation */
+}
+
+@media (max-width: 1000px) {
+    .footerCol {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .footerCol {
+        width: 100%; 
+    }
+}

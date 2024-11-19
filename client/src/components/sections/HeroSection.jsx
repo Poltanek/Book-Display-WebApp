@@ -11,7 +11,7 @@ const HeroSection = () => {
         <p className={styles.paragraph}>
           Discover your next favorite book at Midnight Manuscripts. From fiction to non-fiction, we have something for everyone.
         </p>
-        <button className={styles.ctaButton}>EXPLORE MORE
+        <button className={styles.ctaButton}>FIND OUT MORE
         <i class='bx bx-search-alt'></i>
         </button>
       </div>

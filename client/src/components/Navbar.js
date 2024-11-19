@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import { Spin as Hamburger} from 'hamburger-react';
 
 const Navbar = () => {
+
+    const [isOpen, setOpen] = useState(false)
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -25,13 +28,8 @@ const Navbar = () => {
                             <Link to="/shoppingpage" className={styles.link}>SHOP ALL</Link>
                         </li>
                     </ul>
-                    <div
-                        className={`${styles.hamburger} ${click ? styles.isActive : ''}`}
-                        onClick={handleClick}
-                    >
-                        <div className={styles.bar}></div>
-                    </div>
                 </nav>
+                <Hamburger color='rgb(255, 255, 255' toggled={isOpen} toggle={setOpen}/>
             </div>
         </header>
     );
