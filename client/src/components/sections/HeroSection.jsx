@@ -1,5 +1,4 @@
 // /components/HeroSection/HeroSection.js
-
 import React from 'react';
 import styles from './styles/HeroSection.module.css'; // Import CSS module for Hero section styling
 

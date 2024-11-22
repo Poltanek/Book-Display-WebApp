@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: url('C:\Users\adamt\OneDrive\Documents\GitHub\SpinningDonut\Book-Store-WebApp\client\src\assets\fonts\Nothing_You_Could_Do\NothingYouCouldDo-Regular.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
 @font-face {
     font-family: 'PlayfairDisplay';
     src: url('C:\Programming\React\Book Store Practice\client\app\src\assets\fonts\Playfair_Display\PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
-
-
 
 .heroSection {
     position: relative;
@@ -47,6 +53,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     color: white;
+    font-family: 'NothingYouCouldDo';
 }
 
 .paragraph {

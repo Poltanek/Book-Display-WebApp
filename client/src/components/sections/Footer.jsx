@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerCol}>
           <h3>
-            Menu
+            Social
             <div className={styles.underline}><span></span></div>
           </h3>
 
@@ -45,6 +45,11 @@ const Footer = () => {
           </h3>
           <form>
             <i className="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Enter Name" />
+            <a href="#"><i className="fa-solid fa-arrow-right"></i></a>
+          </form>
+          <form>
+            <i className="fa-solid fa-envelope"></i>
             <input type="text" placeholder="Enter Email Address" />
             <a href="#"><i className="fa-solid fa-arrow-right"></i></a>
           </form>
@@ -57,6 +62,10 @@ const Footer = () => {
             <a href="#"><i className="fa-brands fa-google-plus"></i></a>
           </div>
           */}
+
+          <div className={styles.button}>
+            <button className={styles.signUpButton}>Sign Up</button>
+          </div>
 
         </div>
       </div>

@@ -11,8 +11,10 @@ const Navbar = () => {
 
     return (
         <header className={styles.header}>
+
             <div className={styles.container}>
                 <a href="/" className={styles.logo}>Midnight Manuscripts</a>
+
                 <nav className={styles.navbar}>
                     <ul className={`${styles.navList} ${click ? styles.isActive : ''}`}>
                         <li className={styles.navItem}>
@@ -29,7 +31,11 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </nav>
-                <Hamburger color='rgb(255, 255, 255' toggled={isOpen} toggle={setOpen}/>
+
+                <div className={styles.hamburger}>
+                    <Hamburger color='rgb(255, 255, 255' toggled={isOpen} toggle={setOpen}/>
+                </div>
+                
             </div>
         </header>
     );

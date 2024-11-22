@@ -1,20 +1,26 @@
 const express = require('express');
+const cors = require('cors'); // Allow cross-origin requests for React
+
 const app = express();
+app.use(cors()); // Enable CORS
 
-// Set EJS as templating engine
-app.set('view engine', 'ejs');
+const posts = [
+  { title: 'My First Blog', 
+    description: "This is the first blog that I have written", 
+    author: "Poltanek",
+    date: "21st October",
+  },
+  { title: 'My Second Blog', 
+    description: "This is the second blog that I have written", 
+    author: "Poltanek",
+    date: "22nd October",
+  },
+];
 
-// Serve static files for Bootstrap CSS
-app.use(express.static('public'));
-
-// Blog route using EJS
-app.get('/blog', (req, res) => {
-  const posts = [
-    { title: "Post 1", content: "Content for post 1" },
-    { title: "Post 2", content: "Content for post 2" }
-  ];
-  res.render('blog', { posts });
+// Blog API endpoint
+app.get('/api/blog', (req, res) => {
+  res.json(posts); // Send JSON data
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

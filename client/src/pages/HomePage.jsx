@@ -8,6 +8,7 @@ const HomePage = () => {
       return (
         <div>
             <Navbar />
+            
             {/*Static Components*/}
             <HeroSection />
             <Footer />

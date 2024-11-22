@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: url('C:\Users\adamt\OneDrive\Documents\GitHub\SpinningDonut\Book-Store-WebApp\client\src\assets\fonts\Nothing_You_Could_Do\NothingYouCouldDo-Regular.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('C:\Programming\React\Book Store Practice\client\app\src\assets\fonts\Playfair_Display\PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.aboutSection {
+    position: relative;
+    height: 100vh;
+    background-image: url('C:\Users\adamt\OneDrive\Documents\GitHub\SpinningDonut\Book-Store-WebApp\client\src\assets\imgs\unsplash-image-_YzGQvASeMk.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.aboutSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.553); /* Adjust opacity for darkness level */
+    z-index: 1;
+}
+
+.header {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+    font-family: 'NothingYouCouldDo';
+}
+
+.paragraph {
+    position: relative;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: white;
+    z-index: 2;
+    max-width: 50rem;
+}
