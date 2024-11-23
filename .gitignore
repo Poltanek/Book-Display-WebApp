@@ -1,0 +1,3 @@
+# Ignore the config.env file which containing sensitive data
+.env
+config.env

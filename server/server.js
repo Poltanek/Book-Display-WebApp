@@ -1,26 +1,15 @@
-const express = require('express');
-const cors = require('cors'); // Allow cross-origin requests for React
+const mongoose = require('mongoose'); // Import mongoose
+const express = require('express'); //import express
+const feedRoutes = require('./routes/feed'); // Import feed routes
+const app = express(); // create the express app
+app.use(express.json()); //to parse incoming JSON data
 
-const app = express();
-app.use(cors()); // Enable CORS
+PORT = 5000
 
-const posts = [
-  { title: 'My First Blog', 
-    description: "This is the first blog that I have written", 
-    author: "Poltanek",
-    date: "21st October",
-  },
-  { title: 'My Second Blog', 
-    description: "This is the second blog that I have written", 
-    author: "Poltanek",
-    date: "22nd October",
-  },
-];
-
-// Blog API endpoint
-app.get('/api/blog', (req, res) => {
-  res.json(posts); // Send JSON data
-});
-
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.use('/feed', feedRoutes);
+mongoose
+.connect('mongodb+srv://Poltanek:<QgjQpUGRzs54Laa4>@mern-app.p6koe.mongodb.net/?retryWrites=true&w=majority&appName=MERN-App')
+.then(result => {
+  app.listen(PORT)
+})
+.catch(err => console.log('err', err))
