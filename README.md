@@ -46,3 +46,8 @@ Start the server
 nodemon server.js
 ```
 
+## Appendix
+
+![image](https://github.com/user-attachments/assets/63d05356-efdd-4cce-a334-b3049d76fd1b)
+
+
