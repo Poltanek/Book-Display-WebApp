@@ -1,15 +1,36 @@
-const mongoose = require('mongoose'); // Import mongoose
-const express = require('express'); //import express
-const feedRoutes = require('./routes/feed'); // Import feed routes
-const app = express(); // create the express app
-app.use(express.json()); //to parse incoming JSON data
+require('dotenv').config(); // Load environment variables
 
-PORT = 5000
+const express = require('express');
+const mongoose = require('mongoose');
+const feedRoutes = require('./routes/feed'); // Correct path for routes
 
+const app = express();
+const PORT = process.env.PORT || 5000;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/MERN';
+
+// Middleware to parse JSON request bodies
+app.use(express.json());
+
+// API Routes
 app.use('/feed', feedRoutes);
-mongoose
-.connect('mongodb+srv://Poltanek:<QgjQpUGRzs54Laa4>@mern-app.p6koe.mongodb.net/?retryWrites=true&w=majority&appName=MERN-App')
-.then(result => {
-  app.listen(PORT)
-})
-.catch(err => console.log('err', err))
+
+// Connect to MongoDB
+const connectDB = async () => {
+  try {
+    await mongoose.connect(MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('MongoDB connected');
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+    process.exit(1); // Exit the process if the connection fails
+  }
+};
+
+connectDB(); // Call the function to connect to MongoDB
+
+// Start the server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});

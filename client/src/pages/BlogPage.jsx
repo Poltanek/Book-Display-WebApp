@@ -1,16 +1,16 @@
 import React  from 'react';
 import Navbar from '../components/Navbar';
-import BlogSection from '../components/sections/BlogSection';
-
-
+import BlogContent from '../components/sections/BlogContent';
 import Footer from '../components/sections/Footer';
+import BlogDisplay from '../components/sections/BlogDisplay';
 
 const BlogPage = () => {
       return (
         <div>
             <Navbar />
             {/*Static Components*/}
-            <BlogSection />
+            <BlogContent />
+            <BlogDisplay />
             <Footer />
         </div>
       )

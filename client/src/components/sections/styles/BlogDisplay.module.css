@@ -1,0 +1,16 @@
+.header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'NothingYouCouldDo';
+}
+
+.blogDisplayContainer {
+    background-color: black;
+    color: white;
+}
+
+.blogRow {
+    background-color: black;
+}

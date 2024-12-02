@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./styles/BlogSection.module.css";
+import "./styles/styles.css"
+import styles from "./styles/BlogContent.module.css";
 import Footer from "./Footer";
 
-const BlogSection = () => {
+const BlogContent = () => {
     return(
         <div className={styles.blogSection}>
             <div className={styles.blogContent}>
@@ -20,4 +21,4 @@ const BlogSection = () => {
 }
 
 
-export default BlogSection
+export default BlogContent

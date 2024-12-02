@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './styles/styles.css'
 
 const BlogList = () => {
     const [blogs, setBlogs] = useState([]);
