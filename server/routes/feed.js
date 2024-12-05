@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const feedController = require('../controllers/feedController'); // Import controller functions
+const feedController = require('../controllers/feedController');
 
 // Routes for the blog functionality
-router.get('/', feedController.getBlogs); // Handle fetching all blogs
-router.post('/', feedController.createBlog); // Handle creating a new blog
+router.get('/', feedController.getBlogs); 
+router.get('/', feedController.createBlog);
 
 module.exports = router;

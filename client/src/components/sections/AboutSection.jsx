@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className={styles.aboutSection}>
             <div className={styles.aboutContent}>
                 <h1 className={styles.header}> ABOUT US!</h1>
-                <p className={styles.paragraph}>Here you'll find out more about us and our mission as a online book store company!</p>
+                <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facere suscipit nam, maiores tenetur dolor ipsum temporibus fugit natus. Perferendis, culpa reprehenderit? In ullam ea blanditiis exercitationem aliquam laborum quia.</p>
             </div>
             <div className={styles.socials}>
                 <ul className={styles.sociallist}>
