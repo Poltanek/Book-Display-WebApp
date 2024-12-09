@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/feed'; // Your backend API URL
+const API_URL = 'http://localhost:5000/feed';
 
 // Get all blogs
 export const getBlogs = async () => {

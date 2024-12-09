@@ -1,5 +1,5 @@
 require('dotenv').config(); // Load environment variables
-
+const cors = require('cors')
 const express = require('express');
 const mongoose = require('mongoose');
 const feedRoutes = require('./routes/feed'); // Correct path for routes
@@ -13,6 +13,7 @@ app.use(express.json());
 
 // API Routes
 app.use('/feed', feedRoutes);
+app.use(cors());
 
 // Connect to MongoDB
 const connectDB = async () => {

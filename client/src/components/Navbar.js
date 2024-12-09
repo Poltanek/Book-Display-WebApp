@@ -4,11 +4,8 @@ import styles from './Navbar.module.css';
 import { Spin as Hamburger } from 'hamburger-react';
 
 const Navbar = () => {
-
     const [isOpen, setOpen] = useState(false);
-
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
     const toggleNavbar = () => setOpen(!isOpen);
 
     const handleResize = () => {

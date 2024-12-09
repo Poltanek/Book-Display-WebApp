@@ -4,6 +4,6 @@ const feedController = require('../controllers/feedController');
 
 // Routes for the blog functionality
 router.get('/', feedController.getBlogs); 
-router.get('/', feedController.createBlog);
+router.post('/', feedController.createBlog);
 
 module.exports = router;
