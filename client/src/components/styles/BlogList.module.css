@@ -1,0 +1,77 @@
+/* ------------------------- Assets ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('C:\Programming\React\Book Store Practice\client\app\src\assets\fonts\Playfair_Display\PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.subheading {
+  padding: 15px;
+  font-size: 35px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: auto; 
+  font-family: 'PlayfairDisplay', serif;
+}
+
+
+/* Container for the whole list of blogs */
+
+.blogListContainer {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+  }
+  
+  /* The list of blogs */
+  .blogList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+  }
+  
+  /* Individual blog card */
+  .blogCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Hover effect for blog card */
+  .blogCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title of the blog */
+  .blogTitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Description of the blog */
+  .blogDescription {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Author and Date Info */
+  .blogInfo {
+    font-size: 0.875rem;
+    color: #aaa;
+    display: block;
+  }
+  

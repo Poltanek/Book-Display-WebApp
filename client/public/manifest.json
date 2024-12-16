@@ -1,25 +1,42 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Book Store Web App",
+  "short_name": "BookStore",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "A progressive web app for exploring and purchasing books.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/icons/moon-stars-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "/icons/moon-stars-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/icons/moon-stars-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-screenshot.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile-screenshot.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "portrait"
+    }
+  ]
 }

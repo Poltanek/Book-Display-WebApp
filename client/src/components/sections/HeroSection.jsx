@@ -1,6 +1,5 @@
-// /components/HeroSection/HeroSection.js
 import React from 'react';
-import styles from './styles/HeroSection.module.css'; // Import CSS module for Hero section styling
+import styles from './styles/HeroSection.module.css';
 import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {

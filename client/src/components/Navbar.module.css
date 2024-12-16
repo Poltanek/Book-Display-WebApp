@@ -1,3 +1,5 @@
+/* ------------------------- Assets ------------------------------ */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 @font-face {
     font-family: 'PlayfairDisplay';
@@ -15,6 +17,12 @@
     top: 0;
     left: 0;
     z-index: 100;
+}
+
+.header.scrolled {
+    background-color: black;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 .container {
@@ -144,6 +152,12 @@
     .hamburger {
         display: block;
     }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    
 }
 
 @media (min-width: 768px) {

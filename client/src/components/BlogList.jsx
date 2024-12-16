@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/styles.css';
+import styles from './styles/BlogList.module.css'; 
 
 const BlogList = ({ blogs }) => {
   if (!blogs.length) {
@@ -7,14 +7,14 @@ const BlogList = ({ blogs }) => {
   }
 
   return (
-    <div>
-      <h1>Blog List</h1>
-      <ul>
+    <div className={styles.blogListContainer}>
+      <h1 className={styles.subheading}>New Book Releases</h1>
+      <ul className={styles.blogList}>
         {blogs.map((blog) => (
-          <li key={blog._id}>
-            <h2>{blog.title}</h2>
-            <p>{blog.description}</p>
-            <small>
+          <li key={blog._id} className={styles.blogCard}>
+            <h2 className={styles.blogTitle}>{blog.title}</h2>
+            <p className={styles.blogDescription}>{blog.description}</p>
+            <small className={styles.blogInfo}>
               By {blog.author} on {new Date(blog.date).toLocaleDateString()}
             </small>
           </li>

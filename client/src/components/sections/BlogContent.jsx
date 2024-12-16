@@ -10,9 +10,6 @@ const BlogContent = () => {
                 <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                     Voluptatum impedit dolores perferendis incidunt doloribus accusamus sequi libero officia, 
                     exercitationem ullam perspiciatis veritatis blanditiis nemo consequatur repellat 
-                    dicta non corrupti! Expedita.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Voluptatum impedit dolores perferendis incidunt doloribus accusamus sequi libero officia, 
-                    exercitationem ullam perspiciatis veritatis blanditiis nemo consequatur repellat 
                     dicta non corrupti! Expedita.</p>
             </div>
         </div>
