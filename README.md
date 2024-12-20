@@ -1,5 +1,4 @@
 # Book Store - Midnight Manuscripts Codebase
-Website Link: https://midnight-manuscript-aebncgefdhhse6b4.uksouth-01.azurewebsites.net/ 
 
 
  Midnight Manuscripts is a modern online bookstore that offers a seamless shopping experience, a blog for book enthusiasts, and information about the store. The site includes the following pages:
