@@ -71,7 +71,8 @@ http://localhost:5000/feed
 }
 ```
 
-Data will be found in and located in collection test for development purposes
+Data will be found in and located in collection test for development purposes.
+
 ![image](https://github.com/user-attachments/assets/b3456e52-da23-463d-b345-839f38fe584b)
 
 
