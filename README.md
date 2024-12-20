@@ -10,6 +10,12 @@
 ```Aboutpage``` Information about Midnight Manuscripts and its mission.
 
 
+# Directory Layout
+Should look like the image below: 
+
+![image](https://github.com/user-attachments/assets/ab064215-147a-4e45-81a1-457c090e9f59)
+
+
 # Installation
 ## client-side
 
