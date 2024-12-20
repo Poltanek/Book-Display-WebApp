@@ -22,3 +22,4 @@ exports.createBlog = async (req, res) => {
     res.status(500).json({ error: 'Failed to create blog' });
   }
 };
+

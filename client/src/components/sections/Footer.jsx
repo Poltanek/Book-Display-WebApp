@@ -10,7 +10,7 @@ const Footer = () => {
     e.preventDefault();
     try {
       // Send both email and name to the backend
-      await axios.post("mongodb://localhost:27017/Newsletter", { email, name });
+      await axios.post("http://localhost:5000/newsletter", { email, name });
       alert("You are subscribed!");
       setEmail(""); // Clear the email input after successful submission
       setName(""); // Clear the name input after successful submission
@@ -36,7 +36,7 @@ const Footer = () => {
           <p>45 Royal Ashley Crescent Road</p>
           <p>Winchester</p>
           <p>Hampshire, UK</p>
-          <p className={styles.email}>info.finegap@gmail.com</p>
+          <p className={styles.email}>student.winchester@gmail.com</p>
           <p className={styles.phone}>+44 434 434 4444</p>
         </div>
         <div className={styles.footerCol}>
@@ -76,7 +76,7 @@ const Footer = () => {
               className={styles.inputField}
             />
             <div>
-              <button type="submit" className={styles.signUpButton}>Sign Up</button>
+              <button type="submit" className={styles.signUpButton}>SUBSCRIBE</button>
             </div>
           </form>
 

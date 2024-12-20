@@ -1,12 +1,12 @@
 require('dotenv').config();
-const cors = require('cors')
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const feedRoutes = require('./routes/feed');
-
+const newsletterRoutes = require('./routes/newsletterRoutes'); // Fixed path
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/MERN';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
@@ -14,32 +14,12 @@ app.use(express.json());
 // API Routes
 app.use(cors());
 app.use('/feed', feedRoutes);
-
-
-app.post("/api/Newsletter", async (req, res) => {
-  const { name, email } = req.body;
-
-  if (!name || !email) {
-    return res.status(400).json({ error: "Name and email are required." });
-  }
-
-  try {
-    const newSubscriber = new Newsletter({ name, email });
-    await newSubscriber.save();
-    res.status(201).json({ message: "Subscription successful!" });
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error." });
-  }
-});
-
+app.use('/newsletter', newsletterRoutes);
 
 // Connect to MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(MONGODB_URI);
     console.log('MongoDB connected');
   } catch (err) {
     console.error('MongoDB connection error:', err);
