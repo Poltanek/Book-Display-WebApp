@@ -1,11 +1,9 @@
-# Book Store - Midnight Manuscripts Codebase
+# Midnight Manuscripts Codebase
 
 
  Midnight Manuscripts is a modern online bookstore that offers a seamless shopping experience, a blog for book enthusiasts, and information about the store. The site includes the following pages:
 
 ```Homepage```: Welcomes users with featured books and promotions.
-
-```Shoppage```: A fully functional store for browsing and purchasing books.
 
 ```Blogpage``` A collection of articles about books, authors, and literary trends.
 
@@ -46,6 +44,34 @@ Start the server
 ```
 nodemon server.js
 ```
+
+To send data using postman to newsletter collection within the web app. 
+
+Newsletter 
+```
+http://localhost:5000/newsletter
+```
+```
+{
+  "title": "New Blog Title",
+  "description": "This is the description of the new blog post",
+  "author": "Author Name",
+  "date": 2024-12-20T07:13:43.740+00:00
+}
+```
+To send data using postman to blogData collection within the web app.
+```
+http://localhost:5000/feed
+```
+```
+{
+  "name": "Alan Walker",
+  "email address": "adamtanweer4@gmail.com",
+}
+```
+Data will be found in and located in collection test for development purposes
+![image](https://github.com/user-attachments/assets/b3456e52-da23-463d-b345-839f38fe584b)
+
 
 ## Appendix
 
