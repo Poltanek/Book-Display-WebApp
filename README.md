@@ -45,9 +45,8 @@ Start the server
 nodemon server.js
 ```
 
-To send data using postman to newsletter collection within the web app. 
+To send data using postman to **newsletter** collection within the web app. 
 
-Newsletter 
 ```
 http://localhost:5000/newsletter
 ```
@@ -59,7 +58,9 @@ http://localhost:5000/newsletter
   "date": 2024-12-20T07:13:43.740+00:00
 }
 ```
-To send data using postman to blogData collection within the web app.
+
+To send data using postman to **blogData** collection within the web app.
+
 ```
 http://localhost:5000/feed
 ```
@@ -69,6 +70,7 @@ http://localhost:5000/feed
   "email address": "adamtanweer4@gmail.com",
 }
 ```
+
 Data will be found in and located in collection test for development purposes
 ![image](https://github.com/user-attachments/assets/b3456e52-da23-463d-b345-839f38fe584b)
 
