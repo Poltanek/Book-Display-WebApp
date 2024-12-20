@@ -12,8 +12,8 @@ const Footer = () => {
       // Send both email and name to the backend
       await axios.post("http://localhost:5000/newsletter", { email, name });
       alert("You are subscribed!");
-      setEmail(""); // Clear the email input after successful submission
-      setName(""); // Clear the name input after successful submission
+      setEmail("");
+      setName("");
     } catch (error) {
       alert("Something went wrong. Please try again.");
     }

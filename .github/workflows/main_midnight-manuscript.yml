@@ -1,4 +1,4 @@
-name: Build and deploy ASP.Net Core app to Azure Web App - Midnight-Manuscript
+name: Build and deploy Node.js app to Azure Web App - Midnight-Manuscript
 
 on:
   push:
@@ -8,54 +8,78 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest  # Use Ubuntu for Node.js
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          dotnet-version: '6.0.x'
+          node-version: '14'  # Set the Node.js version to match your project needs
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      - name: Install dependencies for the client and server
+        run: |
+          cd client
+          npm install  # Install client-side dependencies
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o "${{github.workspace}}/myapp"
+          cd ../server
+          npm install  # Install server-side dependencies
+
+      - name: Build client (if applicable)
+        run: |
+          cd client
+          npm run build  # If you're using a frontend framework (like React), build the app
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
-          name: .net-app
-          path: ${{github.workspace}}/myapp
+          name: node-app
+          path: |
+            client/build  # Folder where your frontend is built (adjust this to your setup)
+            server         # The server folder for your backend app
 
   deploy:
-    runs-on: windows-latest
-    needs: build
+    runs-on: ubuntu-latest
+    needs: build  # This ensures the deploy job runs after the build job finishes
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write
+      id-token: write # Required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v2
         with:
-          name: .net-app
+          name: node-app
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}  # Use GitHub secrets
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+      - name: Deploy to Azure Web App (Server)
+        id: deploy-to-webapp-server
+        uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Midnight-Manuscript'
+          app-name: 'Midnight-Manuscript-Server'  # Azure Web App for the server
           slot-name: 'Production'
-          package: ${{github.workspace}}/myapp
+          package: './server'  # Path to the server folder where server files are
+
+      - name: Deploy to Azure Web App (Client)
+        id: deploy-to-webapp-client
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'Midnight-Manuscript-Client'  # Azure Web App for the client (optional, if you're hosting it separately)
+          slot-name: 'Production'
+          package: './client/build'  # Path to the frontend build folder (if you're using a frontend framework like React)
+
