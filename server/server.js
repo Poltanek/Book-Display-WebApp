@@ -7,7 +7,7 @@ const newsletterRoutes = require('./routes/newsletterRoutes'); // Fixed path
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
-
+app.use(express.static(path.join(__dirname, '../client/build')));
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
