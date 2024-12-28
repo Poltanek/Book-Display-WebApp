@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 @font-face {
     font-family: 'PlayfairDisplay';
-    src: url('C:\Programming\React\Book Store Practice\client\app\src\assets\fonts\Playfair_Display\PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../../assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }

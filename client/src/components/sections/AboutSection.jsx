@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/AboutSection.module.css";
-
+import "../sections/styles/styles.css"
 
 const AboutSection = () => {
     return (
