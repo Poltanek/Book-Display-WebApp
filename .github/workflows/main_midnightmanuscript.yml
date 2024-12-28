@@ -23,6 +23,7 @@ jobs:
 
       # Step 3: Install and build the client
       - name: Install and build client
+        working-directory: client
         run: |
           echo "Installing dependencies for client..."
           npm install
