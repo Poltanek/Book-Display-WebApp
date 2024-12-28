@@ -5,7 +5,6 @@ import { Spin as Hamburger } from 'hamburger-react';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [isScrolled, setScrolled] = useState(false);
 
     const toggleNavbar = () => setOpen(!isOpen);
@@ -14,20 +13,11 @@ const Navbar = () => {
         setScrolled(window.scrollY > 50);
     };
 
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768);
-        if (window.innerWidth > 768) {
-            setOpen(false);
-        }
-    };
-
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
