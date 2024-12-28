@@ -4,10 +4,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const feedRoutes = require('./routes/feed');
 const newsletterRoutes = require('./routes/newsletterRoutes'); // Fixed path
+const path = require('path'); // <-- Add this line
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
+
+// Serve static files from React app
 app.use(express.static(path.join(__dirname, '../client/build')));
+
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
@@ -29,10 +33,10 @@ const connectDB = async () => {
 
 connectDB();
 
+// Serve the React app for any other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
-
 
 // Start the server
 app.listen(PORT, '0.0.0.0', () => {
