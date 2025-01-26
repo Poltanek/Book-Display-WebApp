@@ -1,5 +1,12 @@
-# Midnight Manuscripts Codebase
+## Table of Contents
 
+1. [Midnight Manuscripts Codebase](#midnight-manuscripts-codebase)  
+2. [Directory Layout](#directory-layout)  
+3. [Installation](#installation)  
+   - [Client-side](#client-side)  
+   - [Server-side](#server-side)  
+
+# Midnight Manuscripts Codebase
 
  Midnight Manuscripts is a modern online bookstore that offers a seamless shopping experience, a blog for book enthusiasts, and information about the store. The site includes the following pages:
 
