@@ -8,7 +8,7 @@
 
 # Midnight Manuscripts Codebase
 
- Midnight Manuscripts is a modern online bookstore that offers a seamless shopping experience, a blog for book enthusiasts, and information about the store. The site includes the following pages:
+ Midnight Manuscripts is a modern online book display that offers a decent UI/UX experience for exploring new instore books on display at Midnight Manuscripts, a blog for book enthusiasts, and information about the store. The site includes the following pages:
 
 ```Homepage```: Welcomes users with featured books and promotions.
 
